@@ -98,7 +98,7 @@ async def my_plugin_id(update: Update, context: CallbackContext) -> None:
 
             `{my_uuid}`
             """
-            await update.message.reply_text(formatted_msg, parse_mode="MarkdownV2")
+            await update.message.reply_text(strip_spaces(formatted_msg), parse_mode="MarkdownV2")
             return
 
     await update.message.reply_text("You are not registered!")
