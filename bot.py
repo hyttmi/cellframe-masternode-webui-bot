@@ -50,7 +50,7 @@ async def start(update: Update, context: CallbackContext) -> None:
     users["users"].append({"telegram_id": telegram_id, "plugin_id": plugin_id, "subscribed": True})
     save_users()
 
-    await update.message.reply_text(f"Registration complete! Your UUID: `{plugin_id}`", parse_mode="MarkdownV2")
+    await update.message.reply_text(f"Registration complete! Your UUID: `{plugin_id}`. Please add the UUID to `webui.cfg`", parse_mode="MarkdownV2")
 
 async def stop(update: Update, context: CallbackContext) -> None:
     telegram_id = update.message.chat_id
